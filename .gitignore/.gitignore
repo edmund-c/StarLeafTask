@@ -1,0 +1,114 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int i, Dictionary[4096], DictEntry[100], DictSize = 256, NewIndex, k;
+
+    int  old, current, decode, count;
+
+    char decode[50];
+
+    int input[4]; /*Due to the inability of reading in the binary file I have tried the algorithim for the word "banana" . Below in comment
+     is my attempt to read in a binary file however in addition to this I would need to mask it from the 12-bit format the file is in 
+     to an 8-bit format.*/
+    
+    
+    
+    
+/* 
+    int c, count = 0;
+    int  code, remainder, decimalvalue = 0, base = 1;
+    file = fopen("C:\\Users\\Edmund\\Documents\\LzwInputData\\compressedfile1.bin", "rb");
+    if (file)
+    {
+
+       while ((c = getc(file)) != EOF)
+        {             
+            
+           while(c > 0)
+           {
+               remainder = c % 10;
+               decimalvalue = decimalvalue + (remainder * base);
+               binaryinput = binary input/10;
+               base = base *2
+           }
+           
+            }
+
+        fclose(file);
+    }
+
+
+
+
+    return 0;
+}
+
+*/
+
+    input[0] = 98;
+    input[1] = 97;
+    input[2] = 110;
+    input[3] = 257;
+    input[4] = 97;
+
+
+     for (i = 1; i <= DictSize ; i++)
+    {
+        Dictionary[i] = i;
+    }
+
+    old = /*first input of from file*/ input[0];
+
+    printf("%c", old);
+    //Print the very first character
+
+    char
+
+    k=0;
+
+    while(k<5) /* there is data to be read*/
+    {
+
+
+        DictSize = 256;
+        //for couting the dictionary index number
+
+        current = input[1];/*Whatever the next code is*/
+
+        k = k + 1;
+
+        for(i=0; i <= DictSize ; i++)
+        {
+            if(Dictionary[i] == current)
+            {
+                decode = current;
+            }
+
+            else
+            {
+                DictSize = DictSize + 1;
+                decode = old;
+                decode = decode + NewIndex;
+                
+                if(DictSize>4096)
+                {
+                    DictSize = 256;
+                }
+
+                Dictionary[DictSize] = "a", "b"
+                //I would need to make the index an object of 2+ characters 
+            }
+        }
+
+        NewIndex = /*the 2+ character object*/
+
+    }
+
+
+    }
+
+
+    return 0;
+}
